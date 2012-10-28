@@ -1,0 +1,13 @@
+{
+	"auto_upgrade_last_run": 1351400245,
+	"installed_packages":
+	[
+		"Backbone.js",
+		"Djaneiro",
+		"Jinja2",
+		"LESS",
+		"Package Control",
+		"SublimeHg",
+		"Theme - Soda"
+	]
+}

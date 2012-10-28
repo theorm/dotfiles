@@ -1,0 +1,17 @@
+{
+	"color_scheme": "Packages/User/Monokai Soda.tmTheme",
+	"drawWhiteSpace": true,
+	"font_size": 12.0,
+	"highlight_modified_tabs": true,
+	"matchBracketsAngle": true,
+	"matchBracketsBraces": true,
+	"matchBracketsSquare": true,
+	"packages.sublime_hg.hg_exe": "/usr/local/bin/hg",
+	"show_minimap": false,
+	"tab_size": 4,
+	"theme": "Soda Dark.sublime-theme",
+	"soda_classic_tabs": true,
+	"translate_tabs_to_spaces": true,
+	"trimTrailingWhiteSpaceOnSave": true,
+	"vintage_start_in_command_mode": true
+}
