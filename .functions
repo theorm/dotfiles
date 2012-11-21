@@ -144,3 +144,7 @@ function unquarantine() {
 		xattr -r -d "$attribute" "$@"
 	done
 }
+
+function myip() {
+	curl -s checkip.dyndns.org | sed -e 's/[^[:digit:]|.]//g'
+}
