@@ -81,7 +81,9 @@ function show_venv() {
 export DEV_PS1="\$(show_venv)$CO_YELLOW[$CO_CYAN\u$CO_WHITE@$CO_CYAN_B\h$CO_WHITE:$CO_CYAN\w\$(show_branch)$CO_YELLOW]$CO_WHITE\n\$$CO_RESET "
 export DEF_PS1="$CO_YELLOW[$CO_CYAN\u$CO_WHITE@$CO_CYAN_B\h$CO_WHITE:$CO_CYAN\w$CO_YELLOW]$CO_WHITE\$$CO_RESET "
 
-alias dev='export PS1=$DEV_PS1'
+function dev() {
+	export PS1=$DEV_PS1
+}
 alias def='export PS1=$DEF_PS1'
 
 #export PS1="\[${BOLD}${MAGENTA}\]\u \[$WHITE\]at \[$ORANGE\]\h \[$WHITE\]in \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"
