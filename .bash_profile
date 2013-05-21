@@ -1,6 +1,9 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:/usr/local/sbin:$PATH"
 
+# Add node bin dir to the `$PATH`
+export PATH="$PATH:/usr/local/share/npm/bin"
+
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
@@ -25,9 +28,9 @@ for option in autocd globstar; do
 	shopt -s "$option" 2> /dev/null
 done
 
-# Prefer Aussie English and use UTF-8
-export LC_ALL="en_AU.UTF-8"
-export LANG="en_AU"
+# Prefer English and use UTF-8
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US"
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
@@ -45,5 +48,3 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
-
-eval "$(rbenv init -)"
