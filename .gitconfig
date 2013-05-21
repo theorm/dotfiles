@@ -35,10 +35,10 @@
 	reb = "!r() { git rebase -i HEAD~$1; }; r"
 	# Undo a `git push`
 	undopush = push -f origin HEAD^:master
-	
 	# Show files ignored by git:
 	ign = ls-files -o -i --exclude-standard
-
+	# Remove local branches that have been merged into master
+	cleanup = !sh -c 'git branch --merged | grep -v \\* | xargs -n 1 git branch -d'
 
 [apply]
 	# Detect whitespace errors when applying a patch
