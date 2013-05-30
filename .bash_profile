@@ -1,5 +1,5 @@
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:/usr/local/sbin:$PATH"
+export PATH="$HOME/bin:/usr/local/sbin:/usr/local/bin:$PATH"
 
 # Add node bin dir to the `$PATH`
 export PATH="$PATH:/usr/local/share/npm/bin"
