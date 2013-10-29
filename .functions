@@ -148,3 +148,20 @@ function unquarantine() {
 function myip() {
 	curl -s checkip.dyndns.org | sed -e 's/[^[:digit:]|.]//g'
 }
+
+# enable virtualenv in current directory
+function venv() {
+	if [ -n $1 ]; then
+		if [ -f ~/.venv/$1/bin/activate ]; then
+			source ~/.venv/$1/bin/activate;
+		else
+			echo "No virtualenv $1 found";
+		fi
+	else
+		if [ -f '.venv/bin/activate' ]; then
+			source '.venv/bin/activate';
+		else
+			echo "No virtualenv found in $PWD";
+		fi 
+	fi
+}
